@@ -1,0 +1,36 @@
+# tugas cowok
+
+class Kendaraan(object):
+    nama = None
+
+    def __init__(self, nama):
+        self.nama = nama
+
+    def jalan(self):
+        print('{} sedang melaju di jalan'.format(self.nama))
+
+
+class KendaraanSport(Kendaraan):
+    merek = None
+    kecepatan = 0
+
+    def __init__(self, nama, merek):
+        self.nama = nama
+        self.merek = merek
+
+    def set_kecepatan(self, kecepatan):
+        self.kecepatan = kecepatan
+
+    def jalan(self):
+        print('{} dengan merek {} melaju dengan kecepatan {} km/jam'.format(
+            self.nama, self.merek, self.kecepatan))
+
+
+# Contoh objek
+mobil = KendaraanSport('Mobil', 'Supra')
+mobil.set_kecepatan(200)
+mobil.jalan()
+
+motor = KendaraanSport('Motor', 'Yamaha R15')
+motor.set_kecepatan(150)
+motor.jalan()
